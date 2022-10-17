@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+body {
+    background: linear-gradient(180deg, rgba(33,47,67,1) 8%, rgba(50,70,100,1) 42%) no-repeat fixed;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hlavnynadpis {
+    background: rgb(25,25,30);
+    font-family: "Trebuchet MS", "Geneva CE", lucida, sans-serif;
+    color: aliceblue;
+    padding: 0 13px;
+}
+
+h1 {
+    position: relative;
+    left: 0;
+    margin: 0;
+}
+
+.hlavnynadpis a {
+    color: aliceblue;
+    text-decoration: none;
+    display: block;
+    padding: 15px 15px;
+}
+
+.podnadpis {
+    background: rgb(45,45,50);
+    margin: 0;
+    padding: 10px 10px;
+    color: aliceblue;
+    font-family: "Trebuchet MS", "Geneva CE", lucida, sans-serif;
+}
+
+h2 {
+    margin: 0;
+    position: relative;
+    left: 20px;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background: rgb(35,35,40);
+    padding: 0 0;
+}
+
+.navbar .polozkanavbaru {
+    padding: 15px 15px;
+    color: aliceblue;
+    float: left;
+    display: block;
+}
+
+.navbar .polozkanavbaru .linknavbaru {
+    padding: 17px 17px;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.navbar .polozkanavbaru:hover {
+    background-color: rgb(10,15,20);
+}
+
+.text {
+    color: aliceblue;
+    background: rgb(40,50,55);
+    box-shadow: 0 0 20px rgb(0,50,100);
+    padding: 25px;
+    font-family: "Motiva Sans",Arial,Helvetica,sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+.navbar .vpravo {
+    float: right;
+}
