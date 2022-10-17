@@ -94,12 +94,17 @@ h2 {
 
 .text {
     color: aliceblue;
-    background: rgb(40,50,55);
-    box-shadow: 0 0 20px rgb(0,50,100);
-    padding: 25px;
+    padding: 25px 25px;
     font-family: "Motiva Sans",Arial,Helvetica,sans-serif;
     font-weight: normal;
     text-align: center;
+    margin: 10px;
+    border: 2px solid gray;
+}
+
+.textplocha {
+    background: rgb(40,50,55);
+    box-shadow: 0 0 20px rgb(0,50,100);
 }
 
 p {
@@ -108,4 +113,38 @@ p {
 
 .navbar .vpravo {
     float: right;
+}
+
+.obrazokvtexte {
+    width: 100%;
+    padding: 15px;
+}
+
+.obrazokvtexte img {
+    height: 100%;
+    max-width: 100%;
+}
+
+.prihlasovanie {
+    display: table;
+    margin: auto;
+    background: gray;
+    padding: 10px;
+}
+
+.prihlasovanie * {
+    margin: auto;
+    display: table;
+}
+
+.prihlasovacieokienko, label {
+    padding: 5px;
+}
+
+button {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
 }
