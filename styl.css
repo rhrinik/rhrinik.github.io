@@ -26,6 +26,10 @@
     display: table;
 }
 
+.col-6.center {
+   margin-left: 25%;
+}
+
 body {
     background: linear-gradient(180deg, rgba(33,47,67,1) 8%, rgba(50,70,100,1) 42%) no-repeat fixed;
     height: 100%;
@@ -100,6 +104,11 @@ h2 {
     text-align: center;
     margin: 10px;
     border: 2px solid gray;
+    line-height: 1.6;
+}
+
+.text.dole {
+    margin-bottom: 30px;
 }
 
 .textplocha {
@@ -149,14 +158,91 @@ button {
     cursor: pointer;
 }
 
+.footer {
+    margin-top: auto;
+    background: rgb(35,35,40);
+    color: aliceblue;
+    font-size: x-small;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer p {
+    text-align: center;
+}
+
+.footerm {
+    margin-bottom: 63px;
+}
+
+.obrazkyplocha {
+    padding-top: 30px;
+}
+
+.obrazkyplocha img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+}
+
+.bezmedzery {
+    padding: 0;
+}
+
+.obrazkyplocha.blok img {
+    display: block;
+    margin: 0;
+}
+
 @media only screen and (max-width: 768px) {
     .navbar .polozkanavbaru {
         float: none;
     }
-}
-
-@media only screen and (max-width: 768px) {
     [class*="col-"] {
         width: 100%;
+    }
+    * {
+        font-size: small;
+        line-height: 2;
+    }
+    .obrazkyplocha img {
+        max-width: 100%!important;
+    }
+    .col-3.bezmedzery {
+        margin: auto!important;
+    }
+    .col-6.bezmedzery {
+        margin: auto!important;
+    }
+    .obrazkyplocha.blok img {
+        display: block;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+    .col-6.center {
+        margin-left: revert;
+    }
+    .col-3.bezmedzery {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    .col-6.bezmedzery {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    .obrazkyplocha img {
+        display: block;
+        max-width: 50%;
+    }
+    .obrazkyplocha.blok img {
+        display: block;
+        margin: 0;
     }
 }
