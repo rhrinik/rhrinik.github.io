@@ -173,6 +173,10 @@ button {
     text-align: center;
 }
 
+.miesto {
+    height: 90px;
+}
+
 .footerm {
     margin-bottom: 63px;
 }
