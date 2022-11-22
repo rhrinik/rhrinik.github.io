@@ -25,7 +25,7 @@
     </div>
 </div>
 <nav class="navbar navbar-dark navbar-expand-sm bg-dark p-1">
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <ul class="navbar-nav me-auto">
             <li class="nav-item">
                 <a class="nav-link text-white" href="?c=novinky">Novinky</a>

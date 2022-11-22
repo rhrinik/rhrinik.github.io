@@ -42,17 +42,51 @@ class AuthController extends AControllerBase
         return $this->html($data);
     }
 
+    public function checkLoginAndPassword($login, $password) : string
+    {
+        if (strlen($login) < 5) {
+            return 'Meno musí mať aspoň 5 znakov.';
+        }
+
+        if (strlen($password) < 5) {
+            return 'Heslo musí mať aspoň 5 znakov.';
+        }
+
+        if (strtolower($password) == $password) {
+            return 'Heslo musí obsahovať aspoň jedno veľké písmeno.';
+        }
+
+        if (strtoupper($password) == $password) {
+            return 'Heslo musí obsahovať aspoň jedno malé písmeno.';
+        }
+
+        if (!preg_match('~[0-9]+~', $password)) {
+            return 'Heslo musí obsahovať aspoň jedno číslo.';
+        }
+
+        if (!preg_match('~[\~`!@#$%^&*()/_\-+={[}]|\\\:;"\'<,>.?]+~', $password)) {
+            return 'Heslo musí obsahovať aspoň jeden znak.';
+        }
+        
+        return "";
+    }
+
     public function register(): Response
     {
         $formData = $this->app->getRequest()->getPost();
         if (isset($formData['submit'])) {
-            if (strlen($formData['login']) > 5) {
-                $u = new User();
-                $u->login = $formData['login'];
-                $u->hash = password_hash($formData['password'], PASSWORD_BCRYPT);
-                $u->save();
-                return $this->redirect('?c=novinky');
+            $ret = $this->checkLoginAndPassword($formData['login'], $formData['password']);
+            if ($ret != "") {
+                $data = ['message' => $ret];
+                return $this->html($data);
             }
+
+            $u = new User();
+            $u->login = $formData['login'];
+            $u->hash = password_hash($formData['login'], PASSWORD_BCRYPT);
+            $u->save();
+
+            return $this->redirect('?c=novinky');
         }
         return $this->html();
     }

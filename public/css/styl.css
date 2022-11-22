@@ -9,3 +9,16 @@ body {
 #header1 {
     border-width: 0;
 }
+
+.textplocha {
+    background: rgb(40,50,55);
+    box-shadow: 0 0 2rem rgb(0 0 0);
+}
+
+.tlacitko-pridaj {
+    box-shadow: 0 0 0.5rem rgb(0 0 0);
+}
+
+.pod-novinkou {
+    background: linear-gradient(180deg, rgba(34,36,42,1) 0%, rgba(51,48,48,1) 100%);
+}

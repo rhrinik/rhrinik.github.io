@@ -18,6 +18,8 @@ function checkLogin() {
         return false;
     }
 
+    //duplikatne meno sa tu neda zistit
+
     return true;
 }
 
